@@ -1,8 +1,13 @@
 # Predicting a Movie's Success Before Release 
 ### Team 17: Jefferson Zhan, Tony Zhang, Emily Wang, Jordan Leahey 
 
-* * * 
-### 1 Introduction and Motivation 
+* * *
+
+<p align="center">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/cinema-clipart-food-17.png" width="150" height="150"> 
+</p>
+
+### 1) Introduction and Motivation 
 
 #### Preface:
 Our team decided to change our dataset from the one in our proposal to a different Kaggle dataset on movie ratings. This was due to the realization that our last dataset was more suited to visualization projects and unsupervised learning.
@@ -19,7 +24,7 @@ Be able to predict whether a movie will be successful depending on its budget, r
 
 * * * 
 
-### 2 Dataset and Methods 
+### 2) Dataset and Methods 
 #### TMDB 5000 Movie Dataset from Kaggle
 - https://www.kaggle.com/tmdb/tmdb-movie-metadata 
 
@@ -29,4 +34,16 @@ This dataset contains two data sources: tmdb_5000_credits and tmdb_5000_movies.
 - movie_id, title, cast, crew
 
 *tmdb_5000_movies features:* 
-- budget, genres, homepage, id, keywords, original_language, original_title, overview, popularity, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, status, tagline, title, vote_average, vote_count 
+- budget, genres, homepage, id, keywords, original_language, original_title, overview, popularity, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, status, tagline, title, vote_average, vote_count   
+
+#### Preprocessing: 
+Our team decided to combine these two data sources, so we would have access to all these features. We also chose to drop 'homepage' and 'vote_count' from the features as those would not have any effect on a movie pre-release. Data values such as duration which were equal to zero were also cleaned up.
+
+DO WE WANT ANY VISUALIZATIONS OF THE INITIAL DATA? 
+
+### 3) Feature Selection 
+
+First we took a look at the correlation matrix to see if any of the features had an impact on popularity. 
+<p align="center">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/correlationMap.PNG" width="500"> 
+</p>
