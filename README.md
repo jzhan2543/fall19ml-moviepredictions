@@ -46,31 +46,21 @@ Our team decided to combine these two data sources, so we would have access to a
 
 #### Pairwise Plot 
 
+Since certain features are categorical and others are continuous, our team plotted the pairplot to better visualize relations and determine how to deal with the different types. 
+
 <p align="center">
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/pairwise.PNG" width="900"> 
 </p>
-
-WHAT CONCLUSION FROM PAIRWISE PLOT?
 
 * * * 
 
 ### 3) Feature Selection and Data Manipulation 
 
-#### Preprocessing: 
-
-We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration or vote_average which were equal to zero were also cleaned up.
-
-To prepare our data, our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allowed use to certain algorithms to determine whether or not a movie would be successful. 
-
-For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. 
-
-A similar process was followed for converting the 'title_month' and 'duration' of each movie. 
-
-WHATS HAPPENING WITH GENRE? getting flattened out? 
+Firstly, data values such as duration or vote_average which were equal to zero were dropped as those are not plausible. 
 
 Our team decided to deem a movie as "successful" using three metrics: 'Popularity Success', 'Vote Success', and 'Commercial Success'.
-1. 'Popularity Success':  if a movie's popularity feature is greater than the mean of all popularity scores, __do we know the mean___. 
-2. 'Vote Success': likewise if the voting_average of a movie is higher than the mean. 
+1. 'Popularity Success':  if a movie's popularity feature is greater than the mean of all popularity scores. 
+2. 'Vote Success': likewise if the voting_average of a movie is higher than the mean of all vote averages. 
 3. 'Commercial Success': if a movie's gross profit exceeds its budget. 
 
 A movie will be considered *truly successful* if it fits all three of these criterion. The 3 pie graphs below shows a breakdown of the percentage of movies in the dataset that fulfill each success factor. 
@@ -79,28 +69,37 @@ Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/popularitySuccess.PNG" width="250" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/voteSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/commercialSuccess.PNG" width="350" />
 
-
 conditionals for SVM???? 
 
 So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="200"> 
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="250"> 
 </p>
 
-In order to further determine what features play an important role in determing a movie's success, we graphed a few visualizations (THIS COULD BE BETTER WORDED) and decided to drop title_year and duration. (BUT WHY?) 
+In order to further determine what features play an important role, we graphed a few visualizations to determine if there was an important relationship between the feature and successful v.s. unsuccessful movies. 
 
 Budget x True Success      |Title_month x True Success | Duration x True Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
 
+
+#### Preprocessing and Method Selection: 
+
+Our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allows use of certain algorithms to determine whether or not a movie would be successful. 
+
+For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. A similar process was followed for converting the 'title_month' and 'duration' of each movie. For the genre, the dataset provided this information as text, so a movie could be Crime | Thriller | Horror. We mapped each genre into a column, and a movie would have a corresponding 1 in that column if its classified under it. 
+
+After looking at our correlation map between different features and each success - 
+(insert link to image, don't actually input it)
+
+We chose to drop numerous features that did not have a strong correlation with the success of a movie such as'homepage' and 'vote_count'. There were also features such as actor names, directors, languages and more that we chose not to convert to binary and thus also dropped them. Our final modified dataset consisted of 4716 rows and 32 columns. 
+
 * * *  
 
 ### 4) Supervised Learning Models 
 
-HOW WAS DATA SPLIT? WHAT PERCENT INTO TESTING AND WHAT PERCENT INTO TRAINING? 
-
-DO WE WANT VISUALIZATIONS OF THE TREES? 
+To train our models, we split our data randomly so that 75% is used as training and 25% as predictions. 
 
 #### Decision Tree - Cross Validation Score  
 
@@ -125,6 +124,8 @@ Accuracy: 81%
 Cross validation accuracy: 75%
 Accuracy: 81% 
 
+OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
+
 * * * 
 
 ### 5) Conclusion 
@@ -132,16 +133,8 @@ Accuracy: 81%
 SVM and KNN performed the best with roughly the same results. Decision tree performed the worst. 
 
 #### Room for Improvement
-Due to how many aspects there are to movies, there is huge potential for additional exploration. Our team focused on the more numerical features such as budget  or voting average. However, we could test many more of the different attributes to see how they contribute to a movie’s success, such as the actors involved, who directed it, who produced it, key words, and so on.
+Our team could have used a regression model to generate a “likelihood” score of whether or not a movie would be successful. Since this would generate a percentage on a scale from 1-100, the result would be a lot more specific than a binary classification.In terms of classification, we could have also implemented a non-binary gradient scale of success such as “slightly successful” or “very successful” which would also improve specificity. 
+
+Furthermore, due to how many aspects there are to movies, there is huge potential for additional exploration. Our team focused on the more numerical features such as budget  or voting average. However, we could test many more of the different attributes to see how they contribute to a movie’s success, such as the actors involved, who directed it, who produced it, key words, and so on.
 
 This would potentially modify the definition of success in the future. By using different weights and linear combinations in the success features, there might be different results and potentially more accurate predictions.
-
-
-`````````````````Where to move this????``````````````````````
-
-First we took a look at the correlation matrix to see if any of the features had an impact on popularity. 
-<p align="center">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/correlationMap.PNG" width="500"> 
-</p>
-
-```````````````gotta move````````````````
