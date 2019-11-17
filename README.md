@@ -38,28 +38,68 @@ This dataset contains two data sources: tmdb_5000_credits and tmdb_5000_movies.
 *tmdb_5000_movies features:* 
 - budget, genres, homepage, id, keywords, original_language, original_title, overview, popularity, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, status, tagline, title, vote_average, vote_count   
 
+Our team decided to combine these two data sources, so we would have access to all these features. (ENTER DATA HEAD IMAGE)
+
 #### Preprocessing: 
-Our team decided to combine these two data sources, so we would have access to all these features. We also chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration which were equal to zero were also cleaned up.
 
-DO WE WANT ANY VISUALIZATIONS OF THE INITIAL DATA? 
+We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration which were equal to zero were also cleaned up.
 
-### 3) Feature Selection 
+##### Pairwise Plot (Enter pairwise plot pic)
+
+WHAT CONCLUSION FROM PAIRWISE PLOT?
+
+* * * 
+
+### 3) Feature Selection and Data Manipulation 
+
+To prepare our data, our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allowed use to certain algorithms to determine whether or not a movie would be successful. 
+
+For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. 
+
+A similar process was followed for converting the 'title_month' and 'duration' of each movie. 
+
+WHATS HAPPENING WITH GENRE? getting flattened out? 
+
+Our team decided to deem a movie as "successful" using three metrics - if a movie is a 'Popularity Success', 'Vote Success', and 'Commercial Success'. A movie is considered a 'Popularity Success' if its popularity feature is greater than the mean of all popularity scores, __do we know the mean___. A movie is considered a 'Vote Success' likewise if the voting_average is higher than the mean. Finally, a movie is considered a 'Commercial Success' if its gross profit exceeds its budget. A movie will be considered truly successful if it fits all three of these criterion. 
+
+conditionals for SVM???? 
+
+INSERT VISUALIZAIONS FOR featuresxSUCESS -> what was reasoning for dropping stuff here? 
+
+
+
+* * * 
+
+### 4) 
+
+### 5) Supervised Learning Models 
+
+##### Decision Tree - Cross Validation Score  
+
+Accuracy: 74%
+
+###### Random Forest Tree Model
+
+Accuracy: 76% 
+
+###### K-nearest neighbors
+
+Accuracy: 81%
+
+##### SVM 
+
+Accuracy: 81% 
+
+* * * 
+
+### 6) Conclusion 
+
+
+`````````````````Where to move this????``````````````````````
 
 First we took a look at the correlation matrix to see if any of the features had an impact on popularity. 
 <p align="center">
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/correlationMap.PNG" width="500"> 
 </p>
 
-### 4) 
-
-### 5) Discussion 
-
-Decision Tree - Cross Validation Score -> 74%
-
-Random Forest Tree Model -> 76% 
-
-K-nearest neighbors -> 81%
-
-SVM -> 81% 
-
-### 6) Conclusion 
+```````````````gotta move````````````````
