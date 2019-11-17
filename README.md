@@ -88,7 +88,7 @@ Budget x True Success      |Title_month x True Success | Duration x True Success
 
 Our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allows use of certain algorithms to determine whether or not a movie would be successful. 
 
-For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. A similar process was followed for converting the 'title_month' and 'duration' of each movie. For the genre, the dataset provided this information as text, so a movie could be Crime | Thriller | Horror. We mapped each genre into a column, and a movie would have a corresponding 1 in that column if its classified under it. 
+For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. A similar process was followed for converting the 'title_month' and 'duration' of each movie. For the genre, the dataset provided this information as text, so a movie could be Crime, Thriller, Horror. We mapped each genre into a column, and a movie would have a corresponding 1 in that column if its classified under it. 
 
 After looking at our correlation map between different features and each success - 
 (insert link to image, don't actually input it)
@@ -108,9 +108,8 @@ Cross validation accuracy: 69%
 Accuracy: 74%
 
 <p align="left">
-  <img src="images/decisionTree.PNG" width=300> 
+  <img src="images/decisionTree.PNG" width="300"> 
 </p>
-
 
 #### Random Forest Tree Model
 
@@ -119,7 +118,7 @@ DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS?
 Accuracy: 76% 
 
 <p align="left">
-  <img src="images/randomForest.PNG" width=300> 
+  <img src="images/randomForest.PNG" width="300"> 
 </p>
 
 
@@ -132,7 +131,7 @@ Cross validation accuracy: 78%
 Accuracy: 81%
 
 <p align="left">
-  <img src="images/KNN.PNG" width=300> 
+  <img src="images/KNN.PNG" width="300"> 
 </p>
 
 #### SVM 
@@ -142,7 +141,7 @@ Cross validation accuracy: 75%
 Accuracy: 81% 
 
 <p align="left">
-  <img src="images/SVM.PNG" width=300> 
+  <img src="images/SVM.PNG" width="300"> 
 </p>
 
 OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
