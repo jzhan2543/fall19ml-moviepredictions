@@ -15,7 +15,7 @@ Our team decided to change our dataset from the one in our proposal to a differe
 #### Overview:
 Movies are such an important aspect of modern culture. The movie industry brings in billions of dollars annually. Many people will spend their free time watching movies or plan a hangout at the movie theaters, but how many times have you finished watching a movie and realized what a waste of time and money it was, despite being very excited over the premise or actors?
 
-What makes a movie truly successful then? There are movies with budgets in the hundreds of millions but still flop in the box office. Is there a way to use the numbers and data behind each movie to predicts its success beforehand?
+What makes a movie truly successful then? There are movies with budgets in the hundreds of millions but still flop in the box office. Is there a way to use the numbers and data behind each movie to predicts its success beforehand? While a lot of research has been done on predicting movies using user ratings on social media, there's been fewer research done using the actual data behind movies [1]. 
 
 #### Goal:
 Be able to predict whether a movie will be successful depending on its budget, runtime, and popularity *. This prediction would help both producers and the audience. Correlations will give directors and writers a rough guideline of past successes, and the audience can use this information to determine if a movie is worth their time and money to watch in theaters.
@@ -41,7 +41,7 @@ This dataset contains two data sources: tmdb_5000_credits and tmdb_5000_movies.
 Our team decided to combine these two data sources, so we would have access to all these features. 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/dataHead.PNG"> 
+  <img src="images/dataHead.PNG"> 
 </p>
 
 #### Pairwise Plot 
@@ -49,7 +49,7 @@ Our team decided to combine these two data sources, so we would have access to a
 Since certain features are categorical and others are continuous, our team plotted the pairplot to better visualize relations and determine how to deal with the different types. 
 
 <p align="center">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/pairwise.PNG" width="900"> 
+  <img src="images/pairwise.PNG" width="900"> 
 </p>
 
 * * * 
@@ -67,21 +67,21 @@ A movie will be considered *truly successful* if it fits all three of these crit
 
 Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
-<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/popularitySuccess.PNG" width="250" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/voteSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/commercialSuccess.PNG" width="350" />
+<img src="images/popularitySuccess.PNG" width="250" /> | <img src="images/voteSuccess.PNG" width="300" />  | <img src="images/commercialSuccess.PNG" width="350" />
 
 conditionals for SVM???? 
 
 So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="250"> 
+  <img src="images/success.PNG" width="250"> 
 </p>
 
 In order to further determine what features play an important role, we graphed a few visualizations to determine if there was an important relationship between the feature and successful v.s. unsuccessful movies. 
 
 Budget x True Success      |Title_month x True Success | Duration x True Success
 :-------------------------:|:-------------------------:|:------------------:
-<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
+<img src="images/budgetxSuccess.PNG" width="300" /> | <img src="images/monthxSuccess.PNG" width="300" />  | <img src="images/durationxSuccess.PNG" width="300" />
 
 
 #### Preprocessing and Method Selection: 
@@ -108,7 +108,7 @@ Cross validation accuracy: 69%
 Accuracy: 74%
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/decisionTree.PNG" width=300> 
+  <img src="images/decisionTree.PNG" width=300> 
 </p>
 
 
@@ -119,7 +119,7 @@ DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS?
 Accuracy: 76% 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/randomForest.PNG" width=300> 
+  <img src="images/randomForest.PNG" width=300> 
 </p>
 
 
@@ -132,7 +132,7 @@ Cross validation accuracy: 78%
 Accuracy: 81%
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/KNN.PNG" width=300> 
+  <img src="images/KNN.PNG" width=300> 
 </p>
 
 #### SVM 
@@ -142,7 +142,7 @@ Cross validation accuracy: 75%
 Accuracy: 81% 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/SVM.PNG" width=300> 
+  <img src="images/SVM.PNG" width=300> 
 </p>
 
 OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
@@ -159,3 +159,11 @@ Our team could have used a regression model to generate a “likelihood” score
 Furthermore, due to how many aspects there are to movies, there is huge potential for additional exploration. Our team focused on the more numerical features such as budget  or voting average. However, we could test many more of the different attributes to see how they contribute to a movie’s success, such as the actors involved, who directed it, who produced it, key words, and so on.
 
 This would potentially modify the definition of success in the future. By using different weights and linear combinations in the success features, there might be different results and potentially more accurate predictions.
+
+### References 
+
+[1] Latif, Muhammad Hassan, and Hammad Afzal. "Prediction of movies popularity using machine learning techniques." International Journal of Computer Science and Network Security (IJCSNS) 16, no. 8 (2016): 127.
+
+[2] Caruana, Rich, and Alexandru Niculescu-Mizil. “An Empirical Comparison of Supervised Learning Algorithms.” ACM Digital Library, ACM, 2006. dl.acm.org/citation.cfm?id=1143865.
+
+[3] Cutler A., Cutler D.R., Stevens J.R. (2012) Random Forests. In: Zhang C., Ma Y. (eds) Ensemble Machine Learning. Springer, Boston, MA
