@@ -3,6 +3,8 @@
 
 * * *
 
+![alt text](https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/cinema-clipart-food-17.png)
+
 <p align="center">
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/cinema-clipart-food-17.png" width="150" height="150"> 
 </p>
