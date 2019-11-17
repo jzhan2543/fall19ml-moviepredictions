@@ -104,7 +104,13 @@ To train our models, we split our data randomly so that 75% is used as training 
 #### Decision Tree - Cross Validation Score  
 
 Cross validation accuracy: 69%
+
 Accuracy: 74%
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/decisionTree.PNG" width=300> 
+</p>
+
 
 #### Random Forest Tree Model
 
@@ -112,17 +118,32 @@ DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS?
 
 Accuracy: 76% 
 
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/randomForest.PNG" width=300> 
+</p>
+
+
 #### K-nearest neighbors
 
 Using 100 neighbors 
 
 Cross validation accuracy: 78%
+
 Accuracy: 81%
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/KNN.PNG" width=300> 
+</p>
 
 #### SVM 
 
 Cross validation accuracy: 75%
+
 Accuracy: 81% 
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/SVM.PNG" width=300> 
+</p>
 
 OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
 
