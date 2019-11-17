@@ -4,7 +4,7 @@
 * * *
 
 <p align="center">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/cinema-clipart-food-17.png" width="150" height="150"> 
+  <img src="images/cinema-clipart-food-17.png" width="150" height="150"> 
 </p>
 
 ### 1) Introduction and Motivation 
