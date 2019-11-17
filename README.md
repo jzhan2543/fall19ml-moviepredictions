@@ -15,7 +15,7 @@ Our team decided to change our dataset from the one in our proposal to a differe
 #### Overview:
 Movies are such an important aspect of modern culture. The movie industry brings in billions of dollars annually. Many people will spend their free time watching movies or plan a hangout at the movie theaters, but how many times have you finished watching a movie and realized what a waste of time and money it was, despite being very excited over the premise or actors?
 
-What makes a movie truly successful then? There are movies with budgets in the hundreds of millions but still flop in the box office. Is there a way to use the numbers and data behind each movie to predicts its success beforehand?
+What makes a movie truly successful then? There are movies with budgets in the hundreds of millions but still flop in the box office. Is there a way to use the numbers and data behind each movie to predicts its success beforehand? While a lot of research has been done on predicting movies using user ratings on social media, there's been fewer research done using the actual data behind movies [1]. 
 
 #### Goal:
 Be able to predict whether a movie will be successful depending on its budget, runtime, and popularity *. This prediction would help both producers and the audience. Correlations will give directors and writers a rough guideline of past successes, and the audience can use this information to determine if a movie is worth their time and money to watch in theaters.
@@ -159,3 +159,11 @@ Our team could have used a regression model to generate a “likelihood” score
 Furthermore, due to how many aspects there are to movies, there is huge potential for additional exploration. Our team focused on the more numerical features such as budget  or voting average. However, we could test many more of the different attributes to see how they contribute to a movie’s success, such as the actors involved, who directed it, who produced it, key words, and so on.
 
 This would potentially modify the definition of success in the future. By using different weights and linear combinations in the success features, there might be different results and potentially more accurate predictions.
+
+### References 
+
+[1] Latif, Muhammad Hassan, and Hammad Afzal. "Prediction of movies popularity using machine learning techniques." International Journal of Computer Science and Network Security (IJCSNS) 16, no. 8 (2016): 127.
+
+[2] Caruana, Rich, and Alexandru Niculescu-Mizil. “An Empirical Comparison of Supervised Learning Algorithms.” ACM Digital Library, ACM, 2006. dl.acm.org/citation.cfm?id=1143865.
+
+[3] Cutler A., Cutler D.R., Stevens J.R. (2012) Random Forests. In: Zhang C., Ma Y. (eds) Ensemble Machine Learning. Springer, Boston, MA
