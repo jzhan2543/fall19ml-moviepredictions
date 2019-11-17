@@ -95,31 +95,47 @@ Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
 
-* * * 
+* * *  
 
-### 4) 
+### 4) Supervised Learning Models 
 
-### 5) Supervised Learning Models 
+HOW WAS DATA SPLIT? WHAT PERCENT INTO TESTING AND WHAT PERCENT INTO TRAINING? 
+
+DO WE WANT VISUALIZATIONS OF THE TREES? 
 
 #### Decision Tree - Cross Validation Score  
 
+Cross validation accuracy: 69%
 Accuracy: 74%
 
 #### Random Forest Tree Model
+
+DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS? 
 
 Accuracy: 76% 
 
 #### K-nearest neighbors
 
+Using 100 neighbors 
+
+Cross validation accuracy: 78%
 Accuracy: 81%
 
 #### SVM 
 
+Cross validation accuracy: 75%
 Accuracy: 81% 
 
 * * * 
 
-### 6) Conclusion 
+### 5) Conclusion 
+
+SVM and KNN performed the best with roughly the same results. Decision tree performed the worst. 
+
+#### Room for Improvement
+Due to how many aspects there are to movies, there is huge potential for additional exploration. Our team focused on the more numerical features such as budget  or voting average. However, we could test many more of the different attributes to see how they contribute to a movie’s success, such as the actors involved, who directed it, who produced it, key words, and so on.
+
+This would potentially modify the definition of success in the future. By using different weights and linear combinations in the success features, there might be different results and potentially more accurate predictions.
 
 
 `````````````````Where to move this????``````````````````````
