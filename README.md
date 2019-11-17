@@ -74,7 +74,7 @@ Our team decided to deem a movie as "successful" using three metrics: 'Popularit
 2. 'Vote Success': likewise if the voting_average of a movie is higher than the mean. 
 3. 'Commercial Success': if a movie's gross profit exceeds its budget. 
 
-A movie will be considered *truly successful* if it fits all three of these criterion. 
+A movie will be considered *truly successful* if it fits all three of these criterion. The 3 pie graphs below shows a breakdown of the percentage of movies in the dataset that fulfill each success factor. 
 
 Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
@@ -83,28 +83,17 @@ Popularity Sucess          |  Vote Success             | Commercial Success
 
 conditionals for SVM???? 
 
+So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
+
 <p align="left">
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="200"> 
 </p>
 
+In order to further determine what features play an important role in determing a movie's success, we graphed a few visualizations (THIS COULD BE BETTER WORDED) and decided to drop title_year and duration. (BUT WHY?) 
 
-
-INSERT VISUALIZAIONS FOR featuresxSUCESS -> what was reasoning for dropping stuff here? 
-
-
-
-<p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300"> 
-</p>
-
-<p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300"> 
-</p>
-
-<p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300"> 
-</p>
-
+Popularity Sucess          |  Vote Success             | Commercial Success
+:-------------------------:|:-------------------------:|:------------------:
+<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
 
 * * * 
 
