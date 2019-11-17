@@ -44,7 +44,11 @@ Our team decided to combine these two data sources, so we would have access to a
 
 We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration which were equal to zero were also cleaned up.
 
-##### Pairwise Plot (Enter pairwise plot pic)
+##### Pairwise Plot 
+
+<p align="center">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/pairwise.PNG" width="900"> 
+</p>
 
 WHAT CONCLUSION FROM PAIRWISE PLOT?
 
@@ -61,6 +65,11 @@ A similar process was followed for converting the 'title_month' and 'duration' o
 WHATS HAPPENING WITH GENRE? getting flattened out? 
 
 Our team decided to deem a movie as "successful" using three metrics - if a movie is a 'Popularity Success', 'Vote Success', and 'Commercial Success'. A movie is considered a 'Popularity Success' if its popularity feature is greater than the mean of all popularity scores, __do we know the mean___. A movie is considered a 'Vote Success' likewise if the voting_average is higher than the mean. Finally, a movie is considered a 'Commercial Success' if its gross profit exceeds its budget. A movie will be considered truly successful if it fits all three of these criterion. 
+
+Popularity Sucess          |  Vote Success            | Commercial Success
+:-------------------------:|:-------------------------:|:------------------:
+<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/popularitySuccess.PNG" width="250" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/voteSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/commercialSuccess.PNG" width="350" />
+
 
 conditionals for SVM???? 
 
