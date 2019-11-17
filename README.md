@@ -38,13 +38,18 @@ This dataset contains two data sources: tmdb_5000_credits and tmdb_5000_movies.
 *tmdb_5000_movies features:* 
 - budget, genres, homepage, id, keywords, original_language, original_title, overview, popularity, production_companies, production_countries, release_date, revenue, runtime, spoken_languages, status, tagline, title, vote_average, vote_count   
 
-Our team decided to combine these two data sources, so we would have access to all these features. (ENTER DATA HEAD IMAGE)
+Our team decided to combine these two data sources, so we would have access to all these features. 
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/dataHead.PNG"> 
+</p>
+
 
 #### Preprocessing: 
 
 We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration which were equal to zero were also cleaned up.
 
-##### Pairwise Plot 
+#### Pairwise Plot 
 
 <p align="center">
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/pairwise.PNG" width="900"> 
@@ -64,17 +69,41 @@ A similar process was followed for converting the 'title_month' and 'duration' o
 
 WHATS HAPPENING WITH GENRE? getting flattened out? 
 
-Our team decided to deem a movie as "successful" using three metrics - if a movie is a 'Popularity Success', 'Vote Success', and 'Commercial Success'. A movie is considered a 'Popularity Success' if its popularity feature is greater than the mean of all popularity scores, __do we know the mean___. A movie is considered a 'Vote Success' likewise if the voting_average is higher than the mean. Finally, a movie is considered a 'Commercial Success' if its gross profit exceeds its budget. A movie will be considered truly successful if it fits all three of these criterion. 
+Our team decided to deem a movie as "successful" using three metrics: 'Popularity Success', 'Vote Success', and 'Commercial Success'.
+1. 'Popularity Success':  if a movie's popularity feature is greater than the mean of all popularity scores, __do we know the mean___. 
+2. 'Vote Success': likewise if the voting_average of a movie is higher than the mean. 
+3. 'Commercial Success': if a movie's gross profit exceeds its budget. 
 
-Popularity Sucess          |  Vote Success            | Commercial Success
+A movie will be considered *truly successful* if it fits all three of these criterion. 
+
+Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/popularitySuccess.PNG" width="250" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/voteSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/commercialSuccess.PNG" width="350" />
 
 
 conditionals for SVM???? 
 
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="200"> 
+</p>
+
+
+
 INSERT VISUALIZAIONS FOR featuresxSUCESS -> what was reasoning for dropping stuff here? 
 
+
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300"> 
+</p>
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300"> 
+</p>
+
+<p align="left">
+  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300"> 
+</p>
 
 
 * * * 
@@ -83,19 +112,19 @@ INSERT VISUALIZAIONS FOR featuresxSUCESS -> what was reasoning for dropping stuf
 
 ### 5) Supervised Learning Models 
 
-##### Decision Tree - Cross Validation Score  
+#### Decision Tree - Cross Validation Score  
 
 Accuracy: 74%
 
-###### Random Forest Tree Model
+#### Random Forest Tree Model
 
 Accuracy: 76% 
 
-###### K-nearest neighbors
+#### K-nearest neighbors
 
 Accuracy: 81%
 
-##### SVM 
+#### SVM 
 
 Accuracy: 81% 
 
