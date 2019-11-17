@@ -41,7 +41,7 @@ This dataset contains two data sources: tmdb_5000_credits and tmdb_5000_movies.
 Our team decided to combine these two data sources, so we would have access to all these features. 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/dataHead.PNG"> 
+  <img src="images/dataHead.PNG"> 
 </p>
 
 #### Pairwise Plot 
@@ -49,7 +49,7 @@ Our team decided to combine these two data sources, so we would have access to a
 Since certain features are categorical and others are continuous, our team plotted the pairplot to better visualize relations and determine how to deal with the different types. 
 
 <p align="center">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/pairwise.PNG" width="900"> 
+  <img src="images/pairwise.PNG" width="900"> 
 </p>
 
 * * * 
@@ -67,21 +67,21 @@ A movie will be considered *truly successful* if it fits all three of these crit
 
 Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
-<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/popularitySuccess.PNG" width="250" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/voteSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/commercialSuccess.PNG" width="350" />
+<img src="images/popularitySuccess.PNG" width="250" /> | <img src="images/voteSuccess.PNG" width="300" />  | <img src="images/commercialSuccess.PNG" width="350" />
 
 conditionals for SVM???? 
 
 So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/success.PNG" width="250"> 
+  <img src="images/success.PNG" width="250"> 
 </p>
 
 In order to further determine what features play an important role, we graphed a few visualizations to determine if there was an important relationship between the feature and successful v.s. unsuccessful movies. 
 
 Budget x True Success      |Title_month x True Success | Duration x True Success
 :-------------------------:|:-------------------------:|:------------------:
-<img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
+<img src="images/budgetxSuccess.PNG" width="300" /> | <img src="images/monthxSuccess.PNG" width="300" />  | <img src="images/durationxSuccess.PNG" width="300" />
 
 
 #### Preprocessing and Method Selection: 
@@ -108,7 +108,7 @@ Cross validation accuracy: 69%
 Accuracy: 74%
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/decisionTree.PNG" width=300> 
+  <img src="images/decisionTree.PNG" width=300> 
 </p>
 
 
@@ -119,7 +119,7 @@ DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS?
 Accuracy: 76% 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/randomForest.PNG" width=300> 
+  <img src="images/randomForest.PNG" width=300> 
 </p>
 
 
@@ -132,7 +132,7 @@ Cross validation accuracy: 78%
 Accuracy: 81%
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/KNN.PNG" width=300> 
+  <img src="images/KNN.PNG" width=300> 
 </p>
 
 #### SVM 
@@ -142,7 +142,7 @@ Cross validation accuracy: 75%
 Accuracy: 81% 
 
 <p align="left">
-  <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/SVM.PNG" width=300> 
+  <img src="images/SVM.PNG" width=300> 
 </p>
 
 OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
