@@ -44,11 +44,6 @@ Our team decided to combine these two data sources, so we would have access to a
   <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/dataHead.PNG"> 
 </p>
 
-
-#### Preprocessing: 
-
-We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration which were equal to zero were also cleaned up.
-
 #### Pairwise Plot 
 
 <p align="center">
@@ -60,6 +55,10 @@ WHAT CONCLUSION FROM PAIRWISE PLOT?
 * * * 
 
 ### 3) Feature Selection and Data Manipulation 
+
+#### Preprocessing: 
+
+We chose to drop 'homepage' and 'vote_count' from the features as those would not be part of our definition of a "successful" movie. Data values such as duration or vote_average which were equal to zero were also cleaned up.
 
 To prepare our data, our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allowed use to certain algorithms to determine whether or not a movie would be successful. 
 
@@ -91,7 +90,7 @@ So out of all the movies in our dataset, only 21.3% are truly successful using o
 
 In order to further determine what features play an important role in determing a movie's success, we graphed a few visualizations (THIS COULD BE BETTER WORDED) and decided to drop title_year and duration. (BUT WHY?) 
 
-Popularity Sucess          |  Vote Success             | Commercial Success
+Budget x True Success      |Title_month x True Success | Duration x True Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/budgetxSuccess.PNG" width="300" /> | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/monthxSuccess.PNG" width="300" />  | <img src="https://github.com/jzhan2543/fall19ml-moviepredictions/blob/master/images/durationxSuccess.PNG" width="300" />
 
