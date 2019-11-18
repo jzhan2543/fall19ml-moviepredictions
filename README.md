@@ -103,17 +103,23 @@ To train our models, we split our data randomly so that 75% is used as training 
 
 #### Decision Tree - Cross Validation Score  
 
-Cross validation accuracy: 69%
-
+Cross validation accuracy: 69% 
 Accuracy: 74%
 
 <p align="left">
   <img src="images/decisionTree.PNG" width="300"> 
 </p>
 
-#### Random Forest Tree Model
+Depth = 7 
+Accuracy = 79.5%
+<img src="images/decisionTree7.png"> 
 
-DID WE SET A MAX DEPTH OR CHECK TO SEE HOW ACCURACY CHANGES AT CERTAIN DEPTHS? 
+Depth = 3 
+Accuracy = 78%
+<img src="images/decisionTree3.png"> 
+
+
+#### Random Forest Tree Model
 
 Accuracy: 76% 
 
