@@ -103,6 +103,7 @@ The first supervised learning model we used was decision tree. We tried running 
 Depth = 7 
 
 Cross validation accuracy = 73%
+
 Accuracy = 80%
 
 <img src="images/decisionTree7.png"/> 
@@ -114,9 +115,10 @@ Accuracy = 80%
 Depth = 3 
 
 Cross validation accuracy = 73%
+
 Accuracy = 79%
 
-<img src="images/decisionTree3.png"/> 
+<img src="images/decisionTree3.png" height="300"/> 
 
 
 #### Random Forest Tree Model
@@ -135,7 +137,7 @@ Cross validation = 74%
 
 Accuracy = 82%
 
-INPUT IMAGE HERE 
+<img src="images/randomForest3.png"/>
 
 Depth = 3 
 
