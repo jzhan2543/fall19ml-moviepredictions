@@ -98,7 +98,7 @@ To train our models, we split our data randomly so that 75% is used as training 
 
 #### Decision Tree - Cross Validation Score  
 
-**PUT IN SOME DESCRIPTION HERE***
+The first supervised learning model we used was decision tree. We tried running decision tree with varying depths, including 7 and 3. The decision tree with depth 7 provided marginally better results over the decision tree with depth 3, potentially because the greater depths allowed for more splits, which accounted for more features. However, we did not want to include too many splits as that could potentially lead to overfitting.
 
 Cross validation accuracy: 69% 
 
@@ -123,7 +123,7 @@ Accuracy = 78%
 
 #### Random Forest Tree Model
 
-**PUT IN SOME DESCRIPTION HERE**
+The next supervised learning model we used was random forest tree. As random forest trees are essentially multiple decision trees based off random subsamples of the data, the values, as expected, were similar to that of the decision tree.
 
 <p align="left">
   <img src="images/randomForest.PNG" width="300"> 
@@ -139,7 +139,7 @@ Accuracy = 79%
 
 #### K-nearest neighbors
 
-**SOME DESCRIPTION HERE** 
+We also used K-nearest neighbors, which uses a distance function to determine the classification of a new points. K-nearest neighbors differs from our previous approaches of decision tree and random forest in that it does not store an internal model, such as a tree, but instead simply stores the training data and uses that for new classification. We used 100 neighbors to make our estimation more robust and resistant to outliers, as the default of 5 for scikit was not enough for the large size of our data set. K-nearest neighbors led to a higher accuracy than both decision tree and random forest.
 
 Using 100 neighbors 
 
@@ -154,7 +154,7 @@ Accuracy: 79%
 
 #### SVM 
 
-**SOME DESCRIPTION HERE**
+The final supervised learning model we tried was support vector machine. SVM would allow us to create a hyperplane to divide the data set into our binary classfication of successful or unsuccessful. With a linear kernel, we obtained results comparable, if not slightly better, than k-nearest neighbors on average. This makes SVM the best supervised learning model we tested for our classification problem.
 
 Cross validation accuracy: 76%
 
