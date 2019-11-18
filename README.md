@@ -98,25 +98,21 @@ To train our models, we split our data randomly so that 75% is used as training 
 
 #### Decision Tree - Cross Validation Score  
 
-**PUT IN SOME DESCRIPTION HERE***
+Depth = 7 
 
-Cross validation accuracy: 69% 
+Cross validation accuracy = 73%
+Accuracy = 80%
 
-Accuracy: 74%
+<img src="images/decisionTree7.png"/> 
 
 <p align="left">
   <img src="images/decisionTree.PNG" width="300"> 
 </p>
 
-Depth = 7 
-
-Accuracy = 79.5%
-
-<img src="images/decisionTree7.png"/> 
-
 Depth = 3 
 
-Accuracy = 78%
+Cross validation accuracy = 73%
+Accuracy = 79%
 
 <img src="images/decisionTree3.png"/> 
 
@@ -133,9 +129,17 @@ Accuracy = 78%
 
 Depth = 7 
 
-Cross validation = 75%
+Cross validation = 74%
 
-Accuracy = 79%
+Accuracy = 82%
+
+INPUT IMAGE HERE 
+
+Depth = 3 
+
+Cross validation = 78%
+
+Accuracy = 80%
 
 #### K-nearest neighbors
 
@@ -145,7 +149,7 @@ Using 100 neighbors
 
 Cross validation accuracy: 78%
 
-Accuracy: 79%
+Accuracy: 83%
 
 <p align="left">
   <img src="images/KNN.PNG" width="300"> 
@@ -156,9 +160,9 @@ Accuracy: 79%
 
 **SOME DESCRIPTION HERE**
 
-Cross validation accuracy: 76%
+Cross validation accuracy: 75%
 
-Accuracy: 79% 
+Accuracy: 82% 
 
 <p align="left">
   <img src="images/SVM.PNG" width="300"> 
