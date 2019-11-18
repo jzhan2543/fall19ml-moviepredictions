@@ -187,8 +187,6 @@ Accuracy: 82%
   <img src="images/SVM.PNG" width="300"> 
 </p>
 
-OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BETTER ETC ETC
-
 * * * 
 
 ### 5) Conclusion 
