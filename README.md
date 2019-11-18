@@ -44,6 +44,8 @@ Our team decided to combine these two data sources, so we would have access to a
   <img src="images/dataHead.PNG"> 
 </p>
 
+<br>
+
 #### Pairwise Plot 
 
 Since certain features are categorical and others are continuous, our team plotted the pairplot to better visualize relations and determine how to deal with the different types. 
@@ -69,17 +71,22 @@ Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="images/popularitySuccess.PNG" width="300" /> | <img src="images/voteSuccess.PNG" width="300" />  | <img src="images/commercialSuccess.PNG" width="350" />
 
+<br> 
 So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
 
 <p align="left">
   <img src="images/success.PNG" width="300"> 
 </p>
 
+<br> 
+
 In order to further determine what features play an important role, we graphed a few visualizations to determine if there was an important relationship between the feature and successful v.s. unsuccessful movies. 
 
 Budget x True Success      |Title_month x True Success | Duration x True Success
 :-------------------------:|:-------------------------:|:------------------:
 <img src="images/budgetxSuccess.PNG" width="300" /> | <img src="images/monthxSuccess.PNG" width="300" />  | <img src="images/durationxSuccess.PNG" width="300" />
+
+
 
 
 #### Preprocessing and Method Selection: 
@@ -95,6 +102,7 @@ After looking at our correlation map between different features and each success
 ### 4) Supervised Learning Models 
 
 To train our models, we split our data randomly so that 75% is used as training and 25% as predictions. 
+
 
 #### Decision Tree - Cross Validation Score  
 
@@ -121,6 +129,8 @@ Accuracy = 79%
 <img src="images/decisionTree3.png" height="300"/> 
 
 
+<br>
+
 #### Random Forest Tree Model
 
 The next supervised learning model we used was random forest tree. As random forest trees are essentially multiple decision trees based off random subsamples of the data, the values, as expected, were similar to that of the decision tree.
@@ -145,6 +155,9 @@ Cross validation = 78%
 
 Accuracy = 80%
 
+<br>
+
+
 #### K-nearest neighbors
 
 We also used K-nearest neighbors, which uses a distance function to determine the classification of a new points. K-nearest neighbors differs from our previous approaches of decision tree and random forest in that it does not store an internal model, such as a tree, but instead simply stores the training data and uses that for new classification. We used 100 neighbors to make our estimation more robust and resistant to outliers, as the default of 5 for scikit was not enough for the large size of our data set. K-nearest neighbors led to a higher accuracy than both decision tree and random forest.
@@ -159,6 +172,8 @@ Accuracy: 83%
   <img src="images/KNN.PNG" width="300"> 
 </p>
 
+
+<br>
 
 #### SVM 
 
@@ -178,6 +193,7 @@ OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BE
 
 ### 5) Conclusion 
 
+We used four supervised learning models to try to determine if a movie would be successful based on various factors such as genre, runtime, and when it was released. These models were random forest, decision tree, k-nearest neighbors, and SVM with the most successful being k-nearest neighbors and SVM with success rates of 83 percent and 82 percent respectively. This was challenging due to how many columns needed to be classified, and our choices of columns could lead to different results. Our dataset was also missing some important aspects of movies such as opening weekend, MPAA rating and metascore. Had these values existed in our dataset then using PCA to find the most correlated columns would have been a more viable solution and led to better prediction results when creating our models. 
 
 #### Room for Improvement
 Our team could have used a regression model to generate a “likelihood” score of whether or not a movie would be successful. Since this would generate a percentage on a scale from 1-100, the result would be a lot more specific than a binary classification.In terms of classification, we could have also implemented a non-binary gradient scale of success such as “slightly successful” or “very successful” which would also improve specificity. 
