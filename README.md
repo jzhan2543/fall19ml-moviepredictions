@@ -67,14 +67,12 @@ A movie will be considered *truly successful* if it fits all three of these crit
 
 Popularity Sucess          |  Vote Success             | Commercial Success
 :-------------------------:|:-------------------------:|:------------------:
-<img src="images/popularitySuccess.PNG" width="250" /> | <img src="images/voteSuccess.PNG" width="300" />  | <img src="images/commercialSuccess.PNG" width="350" />
-
-conditionals for SVM???? 
+<img src="images/popularitySuccess.PNG" width="300" /> | <img src="images/voteSuccess.PNG" width="300" />  | <img src="images/commercialSuccess.PNG" width="350" />
 
 So out of all the movies in our dataset, only 21.3% are truly successful using our team's definition.
 
 <p align="left">
-  <img src="images/success.PNG" width="250"> 
+  <img src="images/success.PNG" width="300"> 
 </p>
 
 In order to further determine what features play an important role, we graphed a few visualizations to determine if there was an important relationship between the feature and successful v.s. unsuccessful movies. 
@@ -86,14 +84,11 @@ Budget x True Success      |Title_month x True Success | Duration x True Success
 
 #### Preprocessing and Method Selection: 
 
-Our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allows use of certain algorithms to determine whether or not a movie would be successful. 
+Our team decided to use a binary classification system, where we chose threshold values for certain columns of the data, and for each movie, we set that column to either a 1 or a 0. This allows for the use of certain algorithms to determine whether or not a movie would be successful. 
 
 For example, for the budget, we added seven new columns as classifiers to cover the possible range. So if a movie's budget is less than $5,000,000, then it is considered 'extremelylow' budget and would have a 1 in the column. If a movie's budget is great than $150,000,000, then it is considered as 'blockbusterhigh'. A similar process was followed for converting the 'title_month' and 'duration' of each movie. For the genre, the dataset provided this information as text, so a movie could be Crime, Thriller, Horror. We mapped each genre into a column, and a movie would have a corresponding 1 in that column if its classified under it. 
 
-After looking at our correlation map between different features and each success - 
-(insert link to image, don't actually input it)
-
-We chose to drop numerous features that did not have a strong correlation with the success of a movie such as'homepage' and 'vote_count'. There were also features such as actor names, directors, languages and more that we chose not to convert to binary and thus also dropped them. Our final modified dataset consisted of 4716 rows and 32 columns. 
+After looking at our correlation map between different features and each success, we chose to drop numerous features that did not have a strong correlation with the success of a movie such as'homepage' and 'vote_count'. There were also features such as actor names, directors, languages and more that we chose not to convert to binary and thus also dropped them. Our final modified dataset consisted of 4716 rows and 35 columns. 
 
 * * *  
 
@@ -103,7 +98,10 @@ To train our models, we split our data randomly so that 75% is used as training 
 
 #### Decision Tree - Cross Validation Score  
 
+**PUT IN SOME DESCRIPTION HERE***
+
 Cross validation accuracy: 69% 
+
 Accuracy: 74%
 
 <p align="left">
@@ -111,40 +109,56 @@ Accuracy: 74%
 </p>
 
 Depth = 7 
+
 Accuracy = 79.5%
-<img src="images/decisionTree7.png"> 
+
+<img src="images/decisionTree7.png"/> 
 
 Depth = 3 
+
 Accuracy = 78%
-<img src="images/decisionTree3.png"> 
+
+<img src="images/decisionTree3.png"/> 
 
 
 #### Random Forest Tree Model
 
-Accuracy: 76% 
+**PUT IN SOME DESCRIPTION HERE**
 
 <p align="left">
   <img src="images/randomForest.PNG" width="300"> 
 </p>
 
+<img src="images/randomForest7.png"/>
+
+Depth = 7 
+
+Cross validation = 75%
+
+Accuracy = 79%
 
 #### K-nearest neighbors
+
+**SOME DESCRIPTION HERE** 
 
 Using 100 neighbors 
 
 Cross validation accuracy: 78%
 
-Accuracy: 81%
+Accuracy: 79%
 
 <p align="left">
   <img src="images/KNN.PNG" width="300"> 
 </p>
 
+
 #### SVM 
 
-Cross validation accuracy: 75%
+**SOME DESCRIPTION HERE**
 
-Accuracy: 81% 
+Cross validation accuracy: 76%
+
+Accuracy: 79% 
 
 <p align="left">
   <img src="images/SVM.PNG" width="300"> 
@@ -156,7 +170,6 @@ OTHER STUFF TO CONSIDER: PUT IN POSSIBLE REASONINGS FOR WHY SOME METHODS WORK BE
 
 ### 5) Conclusion 
 
-SVM and KNN performed the best with roughly the same results. Decision tree performed the worst. 
 
 #### Room for Improvement
 Our team could have used a regression model to generate a “likelihood” score of whether or not a movie would be successful. Since this would generate a percentage on a scale from 1-100, the result would be a lot more specific than a binary classification.In terms of classification, we could have also implemented a non-binary gradient scale of success such as “slightly successful” or “very successful” which would also improve specificity. 
