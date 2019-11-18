@@ -100,23 +100,21 @@ To train our models, we split our data randomly so that 75% is used as training 
 
 The first supervised learning model we used was decision tree. We tried running decision tree with varying depths, including 7 and 3. The decision tree with depth 7 provided marginally better results over the decision tree with depth 3, potentially because the greater depths allowed for more splits, which accounted for more features. However, we did not want to include too many splits as that could potentially lead to overfitting.
 
-Cross validation accuracy: 69% 
+Depth = 7 
 
-Accuracy: 74%
+Cross validation accuracy = 73%
+Accuracy = 80%
+
+<img src="images/decisionTree7.png"/> 
 
 <p align="left">
   <img src="images/decisionTree.PNG" width="300"> 
 </p>
 
-Depth = 7 
-
-Accuracy = 79.5%
-
-<img src="images/decisionTree7.png"/> 
-
 Depth = 3 
 
-Accuracy = 78%
+Cross validation accuracy = 73%
+Accuracy = 79%
 
 <img src="images/decisionTree3.png"/> 
 
@@ -133,9 +131,17 @@ The next supervised learning model we used was random forest tree. As random for
 
 Depth = 7 
 
-Cross validation = 75%
+Cross validation = 74%
 
-Accuracy = 79%
+Accuracy = 82%
+
+INPUT IMAGE HERE 
+
+Depth = 3 
+
+Cross validation = 78%
+
+Accuracy = 80%
 
 #### K-nearest neighbors
 
@@ -145,7 +151,7 @@ Using 100 neighbors
 
 Cross validation accuracy: 78%
 
-Accuracy: 79%
+Accuracy: 83%
 
 <p align="left">
   <img src="images/KNN.PNG" width="300"> 
@@ -156,9 +162,9 @@ Accuracy: 79%
 
 The final supervised learning model we tried was support vector machine. SVM would allow us to create a hyperplane to divide the data set into our binary classfication of successful or unsuccessful. With a linear kernel, we obtained results comparable, if not slightly better, than k-nearest neighbors on average. This makes SVM the best supervised learning model we tested for our classification problem.
 
-Cross validation accuracy: 76%
+Cross validation accuracy: 75%
 
-Accuracy: 79% 
+Accuracy: 82% 
 
 <p align="left">
   <img src="images/SVM.PNG" width="300"> 
